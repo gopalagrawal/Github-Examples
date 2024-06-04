@@ -8,9 +8,10 @@ jobs:
 
     steps:
       - name: "Set Env Var from context and echo it."
-        run: echo "$MY_ACTION"
+        run: echo "$MY_ACTION :: $MY_ACTOR"
         env:
           MY_ACTION: ${{ github.action }}
+          MY_ACTOR: ${{ github.actor }}
 
 
 
