@@ -9,11 +9,21 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-    - name: "Group Logging"
+
+    - name: "Step 1"
       run: |
         echo "::group::My Group Message"
         echo "Msg 1"
         echo "Msg 2"
         echo "::endgroup::"
 
-              
+    - name: "Step 2"
+      run: |
+        echo "MY_VAL=HelloWorld" >> $GITHUB_ENV
+
+    - name: "Step 3"
+      run: |
+        echo $MY_VAL
+        
+        
+        
